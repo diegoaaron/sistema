@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
-import os
+import os #configuracion para manejar las imagenes 
 import django_heroku
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'sistema.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.db.backends.postgresql', # configuracion BD Postgres
         'NAME': 'libreria',
         'USER': 'postgres',
         'PASSWORD': 'diego989',
@@ -129,8 +129,8 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-MEDIA_ROOT = os.path.join(BASE_DIR, '')
-MEDIA_URL = '/imagenes/'
+MEDIA_ROOT = os.path.join(BASE_DIR, '')  # configuracion para soportar las imagenes 
+MEDIA_URL = '/imagenes/' # configuracion para soportar las imagenes 
 
 
 # Activate Django-Heroku.

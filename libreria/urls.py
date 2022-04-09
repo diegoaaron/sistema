@@ -2,8 +2,8 @@ from django.urls import path
 
 from . import views
 
-from django.conf import Settings, settings
-from django.contrib.staticfiles.urls import static 
+from django.conf import Settings, settings # configuracion para soportar las imagenes
+from django.contrib.staticfiles.urls import static # configuracion para soportar las imagenes 
 
 
 urlpatterns = [

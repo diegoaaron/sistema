@@ -8,10 +8,12 @@ class Libro(models.Model):
     imagen = models.ImageField(upload_to='imagenes/', verbose_name='Imagen' , null=True)
     descripcion = models.TextField(verbose_name='Descripcion', null=True)
 
+    # muestra el ouptup de cada registro 
     def __str__(self):
         fila = "Titulo: " + self.titulo + " - " + "Descripción: " + self.descripcion
         return fila
 
+    # elimina la imagen que almacena cada registro 
     def delete(self, using=None, keep_parents=False):
         self.imagen.storage.delete(self.imagen.name)
         super().delete()
